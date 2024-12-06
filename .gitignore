@@ -1,0 +1,8 @@
+env/
+examples/
+.vscode/
+.pytest_cache/
+figures/
+__pycache__
+abracalibra.egg-info/
+dist/

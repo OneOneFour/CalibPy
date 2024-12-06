@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0","torch>=2.5.0","gpytorch>=1.13","botorch>=0.12.0","matplotlib>=3.9.2","numpy>=2.1.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "abracalibra"
+version = "0.0.1"
+authors = [
+  { name="Robert King", email="robcking@stanford.edu" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/OneOneFour/abracalibra"
+Issues = "https://github.com/OneOneFour/abracalibra/issues"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    "-s"
+]
+pythonpath = "src"
+
