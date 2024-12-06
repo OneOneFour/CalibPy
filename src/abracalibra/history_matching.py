@@ -82,7 +82,7 @@ class HistoryMatchingBase(ApproxBayesianMethod, ABC):
         batches = []
         print(f"torch.no_grad() active: {not torch.is_grad_enabled()}")
         print(f"gpytorch.settings.fast_pred_var active: {gpytorch.settings.fast_pred_var.on()}")
-        for i,batch in enumerate(torch.split(flt_theta,10000)):
+        for i,batch in enumerate(torch.split(flt_theta,1000)):
             print(f"Working on batch {i}",end="\r",flush=True)
             pred_y = self.emulators[wave](batch)
             imp = self.summary(pred_y)
